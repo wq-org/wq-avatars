@@ -1,4 +1,4 @@
-export interface DefaultAvatar {
+export type MemojiType = {
     /**
      * Stable identifier for programmatic access (e.g. "avatar_01").
      */
@@ -39,4 +39,4 @@ export interface DefaultAvatar {
      * Path (relative to web root) to the avatar image.
      */
     src: string;
-}
+};

@@ -1,9 +1,9 @@
-import rawDefaultAvatars from "../default_avatars.json" with { type: "json" };
-import type { DefaultAvatar } from "./types";
+import rawmemoji_avatars from "../memoji_avatars.json" with { type: "json" };
+import type { MemojiType } from "./types";
 
 /**
- * Re-exports `default_avatars.json` as a typed `const` array.
- * `satisfies` ensures the shape matches `DefaultAvatar` while keeping the inferred JSON types.
+ * Re-exports `memoji_avatars.json` as a typed `const` array.
+ * `satisfies` ensures the shape matches `MemojiType` while keeping the inferred JSON types.
  */
-export const defaultAvatars = rawDefaultAvatars satisfies readonly DefaultAvatar[];
+export const memoji_avatars = rawmemoji_avatars satisfies readonly MemojiType[];
 

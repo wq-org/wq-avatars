@@ -1,5 +1,5 @@
-import { defaultAvatars } from "./data";
-const avatarById = new Map(defaultAvatars.map((a) => [a.id, a]));
+import { memoji_avatars } from "./data";
+const avatarById = new Map(memoji_avatars.map((a) => [a.id, a]));
 /**
  * Get a single avatar by its stable id (e.g. "avatar_01").
  */
@@ -7,14 +7,28 @@ export function getAvatar(id) {
     return avatarById.get(id);
 }
 /**
- * Get all default avatars.
+ * Get all avatars.
  */
 export function getAllAvatars() {
-    return defaultAvatars;
+    return memoji_avatars;
+}
+/**
+ * Get  avatars by country code.
+ */
+export function getAvatarsByCountryCode(countryCode) {
+    const avatarsByCountryCode = memoji_avatars.filter((avatar) => avatar.countryCode === countryCode);
+    return avatarsByCountryCode;
 }
 /**
  * Convenience helper: list all avatar ids.
  */
 export function getAllAvatarIds() {
-    return defaultAvatars.map((a) => a.id);
+    return memoji_avatars.map((a) => a.id);
+}
+/**
+ * Get random avatar.
+ */
+export function getRandomAvatar() {
+    const randomIndex = Math.floor(Math.random() * memoji_avatars.length);
+    return memoji_avatars[randomIndex];
 }

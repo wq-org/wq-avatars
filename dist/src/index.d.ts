@@ -1,3 +1,3 @@
-export { defaultAvatars } from "./data";
-export type { DefaultAvatar } from "./types";
-export { getAvatar, getAllAvatars, getAllAvatarIds } from "./helpers";
+export { memoji_avatars } from "./data";
+export type { MemojiType } from "./types";
+export { getAvatar, getAllAvatars, getAllAvatarIds, getAvatarsByCountryCode, getRandomAvatar, } from "./helpers";

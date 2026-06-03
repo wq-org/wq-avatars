@@ -1,8 +1,8 @@
 /**
- * Re-exports `default_avatars.json` as a typed `const` array.
- * `satisfies` ensures the shape matches `DefaultAvatar` while keeping the inferred JSON types.
+ * Re-exports `memoji_avatars.json` as a typed `const` array.
+ * `satisfies` ensures the shape matches `MemojiType` while keeping the inferred JSON types.
  */
-export declare const defaultAvatars: {
+export declare const memoji_avatars: {
     id: string;
     name: string;
     country: string;

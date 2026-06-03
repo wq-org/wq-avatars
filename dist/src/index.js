@@ -1,2 +1,2 @@
-export { defaultAvatars } from "./data";
-export { getAvatar, getAllAvatars, getAllAvatarIds } from "./helpers";
+export { memoji_avatars } from "./data";
+export { getAvatar, getAllAvatars, getAllAvatarIds, getAvatarsByCountryCode, getRandomAvatar, } from "./helpers";
