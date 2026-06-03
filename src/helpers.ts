@@ -1,12 +1,13 @@
 import { memoji_avatars } from "./data";
-import type { MemojiType } from "./types";
+import { withImageUrl } from "./cdn";
+import type { MemojiType, MemojiWithImageUrl } from "./types";
 
 const avatarById: ReadonlyMap<string, MemojiType> = new Map(
   memoji_avatars.map((a: MemojiType) => [a.id, a]),
 );
 
 /**
- * Get a single avatar by its stable id (e.g. "avatar_01").
+ * Get a single avatar by its stable id (e.g. "avatar_female_french_01").
  */
 export function getAvatar(id: string): MemojiType | undefined {
   return avatarById.get(id);
@@ -20,16 +21,40 @@ export function getAllAvatars(): readonly MemojiType[] {
 }
 
 /**
- * Get  avatars by country code.
+ * One avatar with CDN `imageUrl` attached.
+ */
+export function getAvatarUrl(
+  id: string,
+  cdnBase?: string,
+): MemojiWithImageUrl | undefined {
+  const avatar = getAvatar(id);
+  return avatar ? withImageUrl(avatar, cdnBase) : undefined;
+}
+
+/**
+ * Map avatars to full objects with CDN `imageUrl` attached.
+ * Defaults to all avatars when no array is passed.
+ */
+export function getAvatarUrls(
+  avatars: readonly MemojiType[] = memoji_avatars,
+  cdnBase?: string,
+): MemojiWithImageUrl[] {
+  return avatars.map((avatar) => withImageUrl(avatar, cdnBase));
+}
+
+/**
+ * Get avatars by country code with CDN `imageUrl` attached.
  */
 export function getAvatarsByCountryCode(
   countryCode: string,
-): MemojiType[] | [] {
-  const avatarsByCountryCode: MemojiType[] = memoji_avatars.filter(
-    (avatar: MemojiType) => avatar.countryCode === countryCode,
+  cdnBase?: string,
+): MemojiWithImageUrl[] {
+  return getAvatarUrls(
+    memoji_avatars.filter(
+      (avatar: MemojiType) => avatar.countryCode === countryCode,
+    ),
+    cdnBase,
   );
-
-  return avatarsByCountryCode;
 }
 
 /**

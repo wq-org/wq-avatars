@@ -45,8 +45,12 @@ export type MemojiType = {
   avatarIndex: number;
 
   /**
-   * Path (relative to web root) to the avatar image.
+   * Path (relative to CDN or web root) to the avatar image.
    */
   src: string;
-}
+};
+
+export type MemojiWithImageUrl = MemojiType & {
+  imageUrl: string;
+};
 
