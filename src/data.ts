@@ -1,4 +1,4 @@
-import rawDefaultAvatars from "../default_avatars.json" assert { type: "json" };
+import rawDefaultAvatars from "../default_avatars.json" with { type: "json" };
 import type { DefaultAvatar } from "./types";
 
 /**

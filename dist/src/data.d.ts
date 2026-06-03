@@ -5,5 +5,12 @@
 export declare const defaultAvatars: {
     id: string;
     name: string;
-    image: string;
+    country: string;
+    countryCode: string;
+    flag: string;
+    locale: string;
+    slogan: string;
+    sloganEn: string;
+    avatarIndex: number;
+    src: string;
 }[];

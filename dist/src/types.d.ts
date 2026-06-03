@@ -8,7 +8,35 @@ export interface DefaultAvatar {
      */
     name: string;
     /**
-     * Path (relative to repo root) to the avatar image.
+     * Country display name for localization/personalization.
      */
-    image: string;
+    country: string;
+    /**
+     * ISO-like country code (e.g. "IT", "DE").
+     */
+    countryCode: string;
+    /**
+     * Emoji to show as "flag" / persona marker.
+     */
+    flag: string;
+    /**
+     * Locale for localized copy (e.g. "it-IT").
+     */
+    locale: string;
+    /**
+     * Local-language tagline.
+     */
+    slogan: string;
+    /**
+     * English tagline (fallback).
+     */
+    sloganEn: string;
+    /**
+     * Stable numeric index for UI ordering.
+     */
+    avatarIndex: number;
+    /**
+     * Path (relative to web root) to the avatar image.
+     */
+    src: string;
 }
