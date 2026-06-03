@@ -62,7 +62,7 @@ var memoji_avatars_default = [
   },
   {
     id: "avatar_female_Igptq_01",
-    name: "Jordan",
+    name: "Michelle",
     country: "Unknown",
     countryCode: "XX",
     flag: "\u{1F3F3}\uFE0F\u200D\u{1F308}",
