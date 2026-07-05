@@ -252,6 +252,30 @@ var memoji_avatars_default = [
     sloganEn: "Learn, apply, heal",
     avatarIndex: 17,
     src: "/avatars/avatar_male_turkish_01.png"
+  },
+  {
+    id: "avatar_female_german_01",
+    name: "Lena",
+    country: "Germany",
+    countryCode: "DE",
+    flag: "\u{1F1E9}\u{1F1EA}",
+    locale: "de-DE",
+    slogan: "Bereit zu lernen!",
+    sloganEn: "Ready to learn!",
+    avatarIndex: 18,
+    src: "/avatars/avatar_female_german_01.png"
+  },
+  {
+    id: "avatar_female_vietnamese_01",
+    name: "Linh",
+    country: "Vietnam",
+    countryCode: "VN",
+    flag: "\u{1F1FB}\u{1F1F3}",
+    locale: "vi-VN",
+    slogan: "S\u1EB5n s\xE0ng h\u1ECDc!",
+    sloganEn: "Ready to learn!",
+    avatarIndex: 19,
+    src: "/avatars/avatar_female_vietnamese_01.png"
   }
 ];
 
