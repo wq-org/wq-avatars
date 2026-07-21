@@ -88,3 +88,11 @@ Produces bundled `dist/index.js` (ESM), `dist/index.cjs` (CJS), and type declara
 1. Add PNG to `avatars/`
 2. Add entry to `memoji_avatars.json` with matching `src`
 3. Bump version, commit, push, tag for jsDelivr pinning
+
+## Which version number to bump? (Semver)
+
+| Change | Command | Example |
+| --- | --- | --- |
+| New avatar, bugfix — nothing breaks | `npm version patch` | 1.1.1 → **1.1.2** |
+| New feature/helper added, existing ones stay | `npm version minor` | 1.1.1 → **1.2.0** |
+| Avatar removed/renamed, API break | `npm version major` | 1.1.1 → **2.0.0** |
